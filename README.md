@@ -1,4 +1,4 @@
-![스크린샷 2024-11-18 오후 7 33 03](https://github.com/user-attachments/assets/d6cbce2b-cd6d-4749-b3f8-60445df4e783)## VPC 생성
+## VPC 생성
 
 - 이름 : ash-test
 - IPv4 CIDR 블록 : 192.168.0.0/16
