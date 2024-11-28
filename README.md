@@ -185,3 +185,11 @@ $ mysql --host=<AURORA_MSYQL_CLUSTER_ENDPOINT> --ssl-ca=./ap-northeast-2-bundle.
 RDS > 데이터베이스 > aurora-mysql-test > aurora-mysql-test-instance-1 (Writer) > 로그 및 이벤트
 
 ![스크린샷 2024-11-18 오후 7 33 03](https://github.com/user-attachments/assets/dbd50d42-b9be-44af-b1e2-5719aaec6e08)
+
+## SSM Remote Port Forwarding 사용한 Localhost에서 RDS 연결
+
+```bash
+aws ssm start-session --target i-<INSTANCE_ID> --profile <AWS_PROFILE> \
+                       --document-name AWS-StartPortForwardingSessionToRemoteHost \
+                       --parameters '{"portNumber":["3306"],"localPortNumber":["3306"],"host":["<RDS_END_POINT>"]}'
+```
